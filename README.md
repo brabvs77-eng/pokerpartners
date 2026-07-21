@@ -26,12 +26,24 @@ npm install
 npm run dev
 ```
 
-Сборка:
+Сборка (статический экспорт в `out/`):
 
 ```bash
 npm run build
-npm start
 ```
+
+## Cloudflare Pages
+
+| Параметр | Значение |
+|----------|----------|
+| Framework preset | **Next.js (Static HTML Export)** |
+| Production branch | `main` (после merge) или текущая ветка с кодом |
+| Build command | `npx next build` или `npm run build` |
+| Build output directory | `out` |
+| Root directory | `/` (пусто) |
+| Node.js version | `18` или `20` |
+
+Не используйте `npx @cloudflare/next-on-pages@1` — для этого лендинга нужен статический экспорт.
 
 ## Настройка ссылок
 
