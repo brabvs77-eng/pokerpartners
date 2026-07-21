@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import { YandexMetrika } from "@/components/YandexMetrika";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={`${roboto.variable} ${roboto.className} antialiased`}>
         {children}
+        <YandexMetrika />
       </body>
     </html>
   );
