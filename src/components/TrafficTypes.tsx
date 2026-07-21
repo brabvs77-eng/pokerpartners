@@ -3,8 +3,8 @@ import { TrafficIconSvg } from "./Icons";
 
 export function TrafficTypes({ content }: { content: LandingContent }) {
   return (
-    <section className="mt-20 max-md:mt-10 max-md:max-w-full">
-      <h2 className="text-4xl md:text-5xl font-bold font-roadradio text-white mb-12">
+    <section aria-labelledby="traffic-heading" className="mt-20 max-md:mt-10 max-md:max-w-full">
+      <h2 id="traffic-heading" className="text-4xl md:text-5xl font-bold font-roadradio text-white mb-12">
         {content.traffic.title}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

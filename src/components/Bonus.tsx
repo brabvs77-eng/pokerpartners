@@ -13,7 +13,11 @@ export function Bonus({ content }: { content: LandingContent }) {
     >
       <Image
         src="/images/bonus-bg.png"
-        alt=""
+        alt={
+          content.locale === "en"
+            ? "Welcome bonus for new Poker Partners affiliates"
+            : "Приветственный бонус для новых партнёров Poker Partners"
+        }
         fill
         className="object-cover opacity-80 pointer-events-none select-none"
         style={{ zIndex: 1 }}

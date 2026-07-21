@@ -7,7 +7,11 @@ export function Hero({ content }: { content: LandingContent }) {
     <section className="relative flex flex-col items-start justify-center w-full min-h-[320px] px-4 py-8 md:px-16 md:py-16 bg-gradient-to-br from-[#232733] to-[#181C23] rounded-[32px] mt-8 overflow-hidden">
       <Image
         src="/images/hero-bg.png"
-        alt=""
+        alt={
+          content.locale === "en"
+            ? "Poker Partners affiliate program background"
+            : "Фон партнёрской программы Poker Partners"
+        }
         fill
         priority
         className="object-cover pointer-events-none select-none opacity-70"
@@ -19,6 +23,7 @@ export function Hero({ content }: { content: LandingContent }) {
             <span key={line}>
               {i > 0 && <br className="hidden md:block" />}
               {line}
+              {i < content.hero.titleLines.length - 1 ? " " : ""}
             </span>
           ))}
         </h1>

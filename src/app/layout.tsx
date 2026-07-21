@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -10,8 +11,17 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Poker Partners",
-  description: "Poker Partners Landing Page",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description:
+    "Poker Partners — партнёрская программа казино, покера и беттинга.",
+  manifest: "/site.webmanifest",
+  other: {
+    "theme-color": "#111827",
+  },
 };
 
 export default function RootLayout({

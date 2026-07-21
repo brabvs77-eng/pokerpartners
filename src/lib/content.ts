@@ -6,6 +6,7 @@ export type LandingContent = {
   altHref: string;
   metaTitle: string;
   metaDescription: string;
+  metaKeywords: string[];
   nav: {
     partners: string;
     benefits: string;
@@ -67,9 +68,19 @@ export const content: Record<Locale, LandingContent> = {
     locale: "ru",
     altLocale: "en",
     altHref: "/en",
-    metaTitle: "Poker Partners — партнёрская программа",
+    metaTitle: "Poker Partners — партнёрская программа iGaming и Betting",
     metaDescription:
-      "Poker Partners — прямой рекламодатель казино, покера и беттинга. Более 400 офферов в iGaming и Betting.",
+      "Poker Partners — прямой рекламодатель казино, покера и беттинга. 400+ офферов, повышенные ставки, досрочные выплаты и помощь в масштабировании трафика.",
+    metaKeywords: [
+      "партнёрская программа",
+      "poker partners",
+      "iGaming CPA",
+      "betting affiliate",
+      "казино партнёрка",
+      "покер трафик",
+      "RevShare",
+      "арбитраж трафика",
+    ],
     nav: {
       partners: "Партнерам",
       benefits: "Преимущества",
@@ -206,9 +217,19 @@ export const content: Record<Locale, LandingContent> = {
     locale: "en",
     altLocale: "ru",
     altHref: "/",
-    metaTitle: "Poker Partners — Affiliate Program",
+    metaTitle: "Poker Partners — iGaming & Betting Affiliate Program",
     metaDescription:
-      "Poker Partners — direct advertiser of casinos, poker and betting. 400+ offers in iGaming and Betting.",
+      "Poker Partners is a direct advertiser for casino, poker and betting. 400+ offers, higher rates, early payouts and help scaling your traffic.",
+    metaKeywords: [
+      "affiliate program",
+      "poker partners",
+      "iGaming CPA",
+      "betting affiliate",
+      "casino affiliate",
+      "poker traffic",
+      "RevShare",
+      "media buying",
+    ],
     nav: {
       partners: "Partners",
       benefits: "Advantages",

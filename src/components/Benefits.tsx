@@ -2,8 +2,8 @@ import type { LandingContent } from "@/lib/content";
 
 export function Benefits({ content }: { content: LandingContent }) {
   return (
-    <section id="benefits" className="mt-10 md:mt-20 w-full max-w-full px-2 md:px-0">
-      <h2 className="text-2xl md:text-5xl font-bold font-roadradio text-white mb-6 md:mb-12 max-w-full">
+    <section id="benefits" aria-labelledby="benefits-heading" className="mt-10 md:mt-20 w-full max-w-full px-2 md:px-0">
+      <h2 id="benefits-heading" className="text-2xl md:text-5xl font-bold font-roadradio text-white mb-6 md:mb-12 max-w-full">
         {content.benefits.title}
       </h2>
       <div className="flex flex-col gap-6 md:gap-4 w-full">

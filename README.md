@@ -48,3 +48,13 @@ npm run build
 ## Настройка ссылок
 
 Внешние ссылки (кабинет, регистрация, Telegram, email) задаются в `src/lib/links.ts`.
+
+## SEO / домен
+
+В Cloudflare Pages → Settings → Environment variables добавьте:
+
+| Variable | Value |
+|----------|--------|
+| `NEXT_PUBLIC_SITE_URL` | `https://ваш-домен.com` (без `/` в конце) |
+
+От этого зависят canonical, Open Graph, `sitemap.xml` и `robots.txt`.
