@@ -2,7 +2,7 @@ export const LINKS = {
   partners: "https://nutspartners.partner.alanbase.com",
   login: "https://nutspartners.partner.alanbase.com/",
   register: "https://offers-pokerpartners.affise.com/",
-  telegram: "https://t.me/Ilya_PPartners",
+  telegram: "https://t.me/Brabvs77",
   support: "mailto:support@pokerpartners.io",
   bizdev: "mailto:bizdev@pokerpartners.io",
   sales: "mailto:sales@pokerpartners.io",

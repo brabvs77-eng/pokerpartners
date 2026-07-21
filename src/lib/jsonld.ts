@@ -12,7 +12,7 @@ export function organizationJsonLd(): JsonLd {
     url: SITE_URL,
     logo: absoluteUrl("/images/logo.png"),
     email: EMAILS.support,
-    sameAs: ["https://t.me/Ilya_PPartners"],
+    sameAs: ["https://t.me/Brabvs77"],
     contactPoint: [
       {
         "@type": "ContactPoint",
