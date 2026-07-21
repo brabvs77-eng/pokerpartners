@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Road Radio";
+  src: url("/fonts/roadradio_bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #111827;
+  --panel: #232733;
+  --surface: #181c23;
+  --accent: #fdd856;
+  --accent-deep: #f6d150;
+  --ink: #67561a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #111827;
+  color: #fff;
+  font-family: var(--font-roboto), Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cta-button {
+  border-radius: 11.045px;
+  background: #fdd856;
+  box-shadow:
+    0px 3px 0px 0px #f6d150,
+    0px 2px 0px 0px rgba(155, 240, 179, 0.2),
+    0px 0.736px 0px 0px rgba(155, 240, 179, 0.5),
+    -7.363px -7.363px 29.454px 0px rgba(255, 255, 255, 0.3) inset,
+    7.363px 7.363px 29.454px 0px rgba(255, 255, 255, 0.3) inset,
+    0 0 60px 0 #fde47f;
+  color: #67561a;
+  text-align: center;
+  text-shadow: 0px 0.736px 0px rgba(0, 0, 0, 0.15);
+  font-family: "Road Radio", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.contact-card {
+  border-radius: 20.065px;
+  background: linear-gradient(
+    183deg,
+    rgb(59, 69, 89) 2.2%,
+    rgba(100, 111, 130, 0.07) 95.23%
+  );
+}
+
+.legal-content h1 {
+  font-family: "Road Radio", sans-serif;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.legal-content h2 {
+  font-family: "Road Radio", sans-serif;
+  font-size: 1.35rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-content p,
+.legal-content li {
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.legal-content ul {
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
