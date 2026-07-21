@@ -9,6 +9,11 @@ export function Footer({ content }: { content: LandingContent }) {
     <footer className="mt-24 w-full max-md:mt-10 max-md:max-w-full font-roboto pb-8">
       <div className="flex flex-wrap gap-6 mt-7 w-full text-white max-md:max-w-full">
         <div className="flex-auto my-auto text-lg underline max-md:max-w-full flex flex-wrap gap-8">
+          {content.locale === "ru" && (
+            <Link href="/blog" className="hover:text-yellow-400 transition-colors">
+              Блог
+            </Link>
+          )}
           <Link href={termsHref} className="hover:text-yellow-400 transition-colors">
             {content.footer.terms}
           </Link>

@@ -39,6 +39,11 @@ export function Header({ content }: { content: LandingContent }) {
         <a href="#faq" className="px-2 py-1 hover:text-yellow-400 transition-colors">
           {content.nav.faq}
         </a>
+        {content.locale === "ru" && (
+          <Link href="/blog" className="px-2 py-1 hover:text-yellow-400 transition-colors">
+            Блог
+          </Link>
+        )}
         <a
           href={LINKS.telegram}
           target="_blank"
@@ -132,6 +137,15 @@ export function Header({ content }: { content: LandingContent }) {
           >
             {content.nav.faq}
           </a>
+          {content.locale === "ru" && (
+            <Link
+              href="/blog"
+              className="text-white text-lg font-bold py-2 hover:text-yellow-400 transition-colors w-full text-center"
+              onClick={() => setOpen(false)}
+            >
+              Блог
+            </Link>
+          )}
           <a
             href={LINKS.telegram}
             target="_blank"
