@@ -40,7 +40,7 @@ export const termsRu = `
 <p>5.3. Настоящее Соглашение может быть изменено или прекращено Правообладателем в одностороннем порядке без предварительного уведомления Пользователя и без выплаты какой-либо компенсации в связи с этим.</p>
 <p>5.4. Действующая редакция настоящего Соглашения размещена на Сайте Правообладателя.</p>
 <p>5.6. Реквизиты Правообладателя:</p>
-<p>pokerpartners<br/>Адрес: QQ7V+C7G, 34 Chargali St, T’bilisi, Грузия<br/>Email: support@pokerpartners.io</p>
+<p>pokerpartners<br/>Адрес: QQ7V+C7G, 34 Chargali St, T’bilisi, Грузия<br/>Email: support@pokerpartners.org</p>
 <p>Редакция от 02.02.2025 г.</p>
 `.trim();
 
@@ -129,7 +129,7 @@ export const termsEn = `
 <p>5.3. This Agreement may be changed or terminated unilaterally by the Rights Holder without prior notice and without compensation.</p>
 <p>5.4. The current version of this Agreement is posted on the Site.</p>
 <p>5.6. Rights Holder details:</p>
-<p>pokerpartners<br/>Address: QQ7V+C7G, 34 Chargali St, T’bilisi, Georgia<br/>Email: support@pokerpartners.io</p>
+<p>pokerpartners<br/>Address: QQ7V+C7G, 34 Chargali St, T’bilisi, Georgia<br/>Email: support@pokerpartners.org</p>
 <p>Edition dated 02.02.2025.</p>
 `.trim();
 
