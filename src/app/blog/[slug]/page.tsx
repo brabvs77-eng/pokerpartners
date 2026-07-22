@@ -13,13 +13,32 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: Props): Metadata {
   const post = getPost(params.slug);
   if (!post) return {};
-  return buildMetadata({
+  const meta = buildMetadata({
     locale: "ru",
     title: post.title,
     description: post.description,
     path: `/blog/${post.slug}`,
     keywords: post.tags,
   });
+
+  return {
+    ...meta,
+    openGraph: {
+      ...meta.openGraph,
+      images: [
+        {
+          url: post.coverImage,
+          width: 1536,
+          height: 1024,
+          alt: post.coverAlt,
+        },
+      ],
+    },
+    twitter: {
+      ...meta.twitter,
+      images: [post.coverImage],
+    },
+  };
 }
 
 export default function BlogPostPage({ params }: Props) {

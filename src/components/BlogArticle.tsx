@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { BlogPost } from "@/content/blog/posts";
 import { LINKS } from "@/lib/links";
@@ -14,6 +15,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
     "@type": "Article",
     headline: post.title,
     description: post.description,
+    image: [absoluteUrl(post.coverImage)],
     datePublished: post.date,
     dateModified: post.date,
     inLanguage: "ru",
@@ -61,17 +63,27 @@ export function BlogArticle({ post }: { post: BlogPost }) {
           </nav>
 
           <article>
-            <header className="mb-10">
+            <header className="mb-8">
               <p className="text-sm text-gray-400 font-roboto mb-3">
                 {post.date} · {post.readingMinutes} мин чтения
               </p>
               <h1 className="text-3xl md:text-5xl font-roadradio font-bold text-white leading-tight mb-4">
                 {post.title}
               </h1>
-              <p className="text-lg text-gray-300 font-roboto leading-relaxed">
+              <p className="text-lg text-gray-300 font-roboto leading-relaxed mb-6">
                 {post.description}
               </p>
-              <div className="flex flex-wrap gap-2 mt-5">
+              <div className="relative w-full aspect-[16/9] overflow-hidden rounded-[20px] mb-6 bg-[#232733]">
+                <Image
+                  src={post.coverImage}
+                  alt={post.coverAlt}
+                  fill
+                  priority
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 768px"
+                />
+              </div>
+              <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
                   <span
                     key={tag}

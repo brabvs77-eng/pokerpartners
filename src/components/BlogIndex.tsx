@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts } from "@/content/blog/posts";
 import { Footer } from "@/components/Footer";
@@ -27,15 +28,28 @@ export function BlogIndex() {
               <li key={post.slug}>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="block p-6 md:p-8 rounded-[24px] bg-[#232733] hover:bg-[#2a3040] transition-colors"
+                  className="block overflow-hidden rounded-[24px] bg-[#232733] hover:bg-[#2a3040] transition-colors"
                 >
-                  <p className="text-sm text-gray-400 font-roboto mb-2">
-                    {post.date} · {post.readingMinutes} мин
-                  </p>
-                  <h2 className="text-xl md:text-2xl font-roadradio font-bold text-white mb-2">
-                    {post.title}
-                  </h2>
-                  <p className="text-gray-300 font-roboto leading-relaxed">{post.description}</p>
+                  <div className="relative w-full aspect-[16/9] bg-[#181C23]">
+                    <Image
+                      src={post.coverImage}
+                      alt={post.coverAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 768px"
+                    />
+                  </div>
+                  <div className="p-6 md:p-8">
+                    <p className="text-sm text-gray-400 font-roboto mb-2">
+                      {post.date} · {post.readingMinutes} мин
+                    </p>
+                    <h2 className="text-xl md:text-2xl font-roadradio font-bold text-white mb-2">
+                      {post.title}
+                    </h2>
+                    <p className="text-gray-300 font-roboto leading-relaxed">
+                      {post.description}
+                    </p>
+                  </div>
                 </Link>
               </li>
             ))}
